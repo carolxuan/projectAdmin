@@ -1,0 +1,58 @@
+/* 電腦版 navbar */
+.desktop-navbar {
+  position: fixed;
+  width: 14%;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  background-color: #6fccba;
+}
+.desktop-navbar .navbar {
+  display: block;
+  padding: 50px 32px 0 32px;
+}
+.navbar-desktop-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.nav-link {
+  color:#7E7E7E;
+}
+.hr-style {
+  background-color: #d0d0d0;
+  margin: 0;
+}
+
+@media (max-width:1140px) {
+  .desktop-navbar .navbar {
+    padding: 50px 20px 0 20px;
+  }
+}
+@media (max-width:992px) {
+  .desktop-navbar {
+    width: 20%;
+  }
+  .desktop-navbar .navbar {
+    padding: 50px 16px 0 16px;
+  }
+}
+
+/* 手機版 navbar */
+.phone-navbar {
+  display: none;
+}
+.phone-navbar-nav {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: #6FCCBA !important;
+}
+.navbar-title {
+  font-size: 20px;
+  margin: 0;
+}
+@media (max-width:768px) {
+  .phone-navbar {
+    display: block;
+  }
+  .desktop-navbar {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.title-style {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.title-style:before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1em;
+  background-color: #000;
+  margin-right: 8px;
+}
+.title-step {
+  font-size: 18px;
+  font-weight: 400;
+}
+.title-step img {
+  margin-right: 8px;
+}
+
+@media (max-width:480px) {
+  .title-style {
+    font-size: 20px;
+  }
+}

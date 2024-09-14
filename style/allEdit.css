@@ -1,0 +1,203 @@
+/* editInfo */
+.form-control {
+  border-radius: 20px;
+  border: 1px solid #DBDBDB;
+}
+.form-control:focus {
+  border-color: #6FCCBA;
+  box-shadow: 0 0 0 0.2rem rgba(111, 204, 186, 0.25);
+}
+.name-input {
+  flex: 1;
+}
+.required {
+  margin-left: 10px;
+  color: #DB0E0E;
+}
+.edit-info-pic img {
+  width: 120px;
+  min-height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.progressbar {
+  width: 400px;
+  margin: auto;
+}
+.progressbar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.progressbar li {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #DBDBDB;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.progressbar li.active {
+  background-color: #6FCCBA;
+}
+.progressbar li + li::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ddd;
+  top: 50%;
+  left: -64px;
+  z-index: -1;
+}
+.progressbar li.active + li::before {
+  background-color: #6FCCBA;
+}
+
+.form-style {
+  padding: 32px 64px;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .1);
+}
+.form-style-serve {
+  padding: 32px 28px;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .1);
+}
+
+/* edit-company */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills-list li {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #6FCCBA;
+  border: 1px solid #6FCCBA;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.remove-skill {
+  margin-left: 8px;
+  color: #6FCCBA;
+  cursor: pointer;
+}
+.skills-list li .remove-skill:hover {
+  color: #3EB09A;
+}
+.skills-list li:hover {
+  outline: 1px solid rgba(111, 204, 186, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(111, 204, 186, 0.25);
+  border-color: #6FCCBA;
+}
+
+/* edit-serve */
+.table-css {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+}
+.table-css thead tr {
+  border-bottom: 1px solid #888;
+}
+.table-css thead th {
+  padding: 16px;
+  font-weight: 400;
+  color: #888;
+}
+.table-css tbody tr {
+  border-bottom: 1px solid #DBDBDB;
+}
+.table-css tbody td {
+  padding: 16px;
+}
+.table-img {
+  width: 100px;
+  min-height: 100px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+/* edit-media */
+.media-btn {
+  border-bottom: 1px solid #888;
+  padding: 0 0 16px 0;
+}
+
+.social-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.social-item .arrow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #6FCCBA;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (max-width:1140px) {
+  .overflow-wrap {
+    overflow-x: scroll;
+  }
+  .table-css {
+    white-space: nowrap;
+  }
+  .table-img {
+    width: 100%;
+    min-height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .progressbar {
+    width: 300px;
+  }
+  .progressbar li {
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+  }
+  .progressbar li + li::before {
+    width: 32px;
+    left: -45px;
+  }
+  .form-style {
+    padding: 32px 32px;
+  }
+  .form-style-serve {
+    padding: 32px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .form-style {
+    padding: 20px 16px 20px 16px;
+  }
+}

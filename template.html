@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>模板選擇</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- custom css -->
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/layout.css">
+  <link rel="stylesheet" href="./style/button.css">
+  <link rel="stylesheet" href="./style/variables.css">
+  <link rel="stylesheet" href="./style/navbar.css">
+  <link rel="stylesheet" href="./style/template.css">
+</head>
+<body>
+  <!-- start desktop-navbar -->
+  <div class="desktop-navbar">
+    <nav class="navbar">
+      <a href="#"><h3 class="navbar-desktop-title">後台管理</h3></a>
+      <hr class="hr-style">
+      <div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./template.html">模板選擇</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./test.html">其他頁面</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- end desktop-navbar -->
+  <!-- start phone-navbar -->
+  <div class="phone-navbar">
+    <nav class="navbar fixed-top phone-navbar-nav">
+      <div class="container-fluid">
+        <a href="#"><h3 class="navbar-title">後台管理</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasNavbarLabel">後台管理</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <hr class="hr-style">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="./template.html">模板選擇</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./test.html">其他頁面</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- end phone-navbar -->
+  <main class="wrapper">
+    <section class="select">
+      <div class="container">
+        <h2 class="title-style mb-4">模板選擇</h2>
+        <div class="select-tab mb-4">
+          <button class="tab-btn" data-tab="select1">通用版型</button>
+          <button class="tab-btn" data-tab="select2">商業版型</button>
+          <button class="tab-btn" data-tab="select3">時尚版型</button>    
+        </div>
+        <div class="select-content">
+          <div id="select1" class="select-box">
+            <div class="tab-content-card">
+              <div class="card-item">
+                <div class="card-img">
+                  <img src="./image/select-1.jpg" alt="" class="mb-3">
+                  <div class="overlay-img">
+                    <button class="edit-btn l-btn btn-outline--white" data-url="editInfo.html">編輯</button>
+                  </div>
+                </div>
+                <h3>企業藍</h3>
+              </div>
+              <div class="card-item">
+                <div class="card-img">
+                  <img src="./image/select-2.png" alt="" class="mb-3">
+                  <div class="overlay-img">
+                    <button class="edit-btn l-btn btn-outline--white" data-url="editInfo.html">編輯</button>
+                  </div>
+                </div>
+                <h3>極簡</h3>
+              </div>
+              <div class="card-item">
+                <div class="card-img">
+                  <img src="./image/select-2.png" alt="" class="mb-3">
+                  <div class="overlay-img">
+                    <button class="edit-btn l-btn btn-outline--white" data-url="editInfo.html">編輯</button>
+                  </div>
+                </div>
+                <h3>極簡</h3>
+              </div>  
+            </div>
+          </div>
+          <div id="select2" class="select-box">
+            <div class="tab-content-card">待新增...</div>
+          </div>
+          <div id="select3" class="select-box">
+            <div class="tab-content-card">待新增......</div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </section>
+  </main>
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    // select-tab
+    const selectButtons = document.querySelectorAll('.tab-btn');
+    const selectContents = document.querySelectorAll('.select-box');
+
+    function openTab(selectId) {
+      selectButtons.forEach(btn => btn.classList.remove('active'));
+      selectContents.forEach(content => content.classList.remove('active'));
+
+      document.querySelector(`[data-tab="${selectId}"]`).classList.add('active');
+      document.getElementById(selectId).classList.add('active');
+    }
+
+    selectButtons.forEach(button => {
+      button.addEventListener('click', () => openTab(button.getAttribute('data-tab')));
+    });
+
+    openTab('select1');
+
+    // 編輯按鈕的頁面跳轉
+    const editButtons = document.querySelectorAll('.edit-btn');
+    editButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetUrl = button.getAttribute('data-url');
+        window.location.href = targetUrl;
+      });
+    });
+  </script>
+</body>
+</html>
