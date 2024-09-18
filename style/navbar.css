@@ -8,31 +8,31 @@
 }
 .desktop-navbar .navbar {
   display: block;
-  padding: 50px 32px 0 32px;
 }
 .navbar-desktop-title {
+  color: #fff;
   font-size: 20px;
   margin-bottom: 16px;
+  padding: 12px 20px;  
 }
-.nav-link {
-  color:#7E7E7E;
+.desktop-navbar .nav-item .nav-link {
+  padding: 12px 20px;  
 }
-.hr-style {
-  background-color: #d0d0d0;
-  margin: 0;
+.desktop-navbar .nav-link {
+  color:#fff;
+}
+.desktop-navbar .nav-link.active {
+  background-color: rgba(62,176,154, .8); 
+  color: #FFF !important;
+}
+.desktop-navbar .nav-link:hover {
+  background-color: rgba(62,176,154, .8); 
+  color: #fff;
 }
 
-@media (max-width:1140px) {
-  .desktop-navbar .navbar {
-    padding: 50px 20px 0 20px;
-  }
-}
 @media (max-width:992px) {
   .desktop-navbar {
     width: 20%;
-  }
-  .desktop-navbar .navbar {
-    padding: 50px 16px 0 16px;
   }
 }
 
@@ -46,6 +46,9 @@
 }
 .navbar-title {
   font-size: 20px;
+  margin: 0;
+}
+.hr-style {
   margin: 0;
 }
 @media (max-width:768px) {
