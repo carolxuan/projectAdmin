@@ -1,3 +1,13 @@
+.select-tab {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.select-tab::-webkit-scrollbar {
+  display: none;
+}
 .tab-btn {
   display: inline-block;
   padding: 20px 40px;
