@@ -104,6 +104,17 @@
   box-shadow: 0 0 0 0.2rem rgba(111, 204, 186, 0.25);
   border-color: #6FCCBA;
 }
+.selectCompnay {
+  border-radius: 24px;
+  border: 1px solid #D0D0D0;
+  width: 180px;
+  padding: 5px 16px;
+}
+.selectCompnay:focus {
+  outline: 1px solid rgba(111, 204, 186, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(111, 204, 186, 0.25);
+  border-color: #6FCCBA;
+}
 
 /* edit-serve */
 .table-css {
@@ -174,6 +185,11 @@
     min-height: auto;
   }
 }
+  @media (max-width: 575px) {
+    .selectCompnay {
+      width: 130px;
+    }
+  }
 @media (max-width: 480px) {
   .progressbar {
     width: 300px;
@@ -199,5 +215,9 @@
 @media (max-width: 375px) {
   .form-style {
     padding: 20px 16px 20px 16px;
+  }
+  .selectCompnay {
+    padding: 5px 8px;
+    width: 120px;
   }
 }

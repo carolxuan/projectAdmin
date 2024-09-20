@@ -87,8 +87,28 @@
               </div>
             </div>
             <div class="mb-3">
-              <label for="address" class="form-label">公司地址</label>
-              <input type="text" class="form-control" id="address" placeholder="請輸入公司地址"/>
+              <p class="mb-3">公司地址</p>
+              <div class="d-flex mb-3">
+                <div class="me-3">
+                  <select class="form-select selectCompnay" id="city">
+                    <option disabled selected hidden>請選擇縣市</option>
+                    <option value="taipei">台北市</option>
+                    <option value="taichung">台中市</option>
+                    <option value="kaohsiung">高雄市</option>
+                  </select>
+                </div>
+                <div>
+                  <select class="form-select selectCompnay" id="district">
+                    <option disabled selected hidden>請選擇區域</option>
+                    <option value="daan">大安區</option>
+                    <option value="xinyi">信義區</option>
+                    <option value="banqiao">板橋區</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <input type="text" class="form-control" id="address" placeholder="請輸入地址"/>
+              </div>         
             </div>
             <div class="mb-3">
               <label for="companyNumber" class="form-label">統一編號</label>
